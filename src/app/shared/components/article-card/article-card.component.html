@@ -1,0 +1,65 @@
+<article id="post-74" class="blog_post_container post-74 post type-post status-publish format-image has-post-thumbnail hentry category-images-posts category-life-style tag-people post_format-post-format-image">
+  <div class="blog_post clearfix">
+    <div class="posts_list_wrapper clearfix">
+      <div class="post_thumbnail_wrapper">
+        <div class="blog_post_banner blog_post_image">
+          <a href="#" title="Restaurant Employer Read Clients Orders On His iPad">
+            <img width="880" height="400" src="{{article.description}}"
+              class="img-responsive wp-post-image" sizes="(max-width: 880px) 100vw, 880px" />
+          </a>
+        </div>
+      </div>
+      <div class="post_info_wrapper">
+        <!-- use this wrapper in list style only to group all info far from thumbnail wrapper -->
+        <div class="blog_post_title">
+          <h2 class="entry-title title post_title">
+            <a href="#" rel="bookmark">
+              {{ article.title }}
+            </a>
+          </h2>
+        </div>
+
+        <div class="blog_post_meta clearfix">
+          <span class="blog_meta_item blog_meta_tags">Tags
+            <a href="#" rel="tag">{{ article.category }}</a>
+          </span>
+          <span class="blog_meta_item blog_meta_date">
+            <span class="screen-reader-text"></span>
+            <time class="entry-date published updated">{{ article.date | date: 'dd/MM/yyyy' }}</time>
+          </span>
+          <span class="blog_meta_item blog_meta_author">
+            <span class="author vcard">
+              <a class="meta_author_avatar_url" href="#">
+                <img src="{{ baseUrl + 'images/authors/amad.jpg' }}" width="25" height="25" alt="John Doe"
+                  class="avatar avatar-25 wp-user-avatar wp-user-avatar-25 alignnone photo" />
+              </a>
+              <a class="url fn n" href="#">Duy Nguyen</a>
+            </span>
+          </span>
+        </div>
+
+
+        <div class="entry-content blog_post_text blog_post_description">
+          {{ article.summary }}
+        </div>
+
+        <div class="blog_post_control clearfix">
+
+
+          <div class="blog_post_control_item blog_post_readmore">
+            <a [routerLink]="['/article/', article.id]" class="read_more_link">Continue Reading</a>
+          </div>
+          <div class="blog_post_control_item blog_post_share">
+            <span class="share_item share_sign">
+              <i class="fa fa-share "></i>
+            </span>
+          </div>
+        </div>
+
+      </div>
+      <!-- .post_info_wrapper close post_info_wrapper in cas of list style-->
+    </div>
+    <!-- .posts_list_wrapper -->
+
+  </div>
+</article>

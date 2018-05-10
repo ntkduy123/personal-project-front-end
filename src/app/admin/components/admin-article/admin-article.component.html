@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">ID</th>
+      <th scope="col" class="text-center">Title</th>
+      <th scope="col" class="text-center">Last update</th>
+      <th scope="col" class="text-center">Category</th>
+      <th scope="col" class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of articles">
+      <td class="text-center">{{ a.id }}</td>
+      <td class="text-center">{{ a.title }}</td>
+      <td class="text-center">{{ a.date | date: 'dd/MM/yyyy' }}</td>
+      <td class="text-center">{{ a.category  }}</td>
+      <td class="text-center">
+        <a [routerLink]="['/admin/article/', a.id]">
+          <i  class="fa fa-pencil"></i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

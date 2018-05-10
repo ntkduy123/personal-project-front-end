@@ -1,0 +1,17 @@
+.table .fa-pencil {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.table .fa-pencil:hover {
+    color: green;
+}
+
+.table .fa-ban {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.table .fa-ban:hover {
+    color: red;
+}

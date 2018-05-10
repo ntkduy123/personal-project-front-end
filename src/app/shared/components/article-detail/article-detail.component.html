@@ -1,0 +1,47 @@
+<div id="post-74" class="blog_post_container post-74 post type-post status-publish format-image has-post-thumbnail hentry category-images-posts category-life-style tag-people post_format-post-format-image">
+  <div class="blog_post clearfix">
+    <div class="blog_post_banner blog_post_image">
+      <img width="880" height="400" src="https://awcdn1.ahmad.works/writing/wp-content/uploads/2015/05/cheerful-loving-couple-bakers-drinking-coffee-PCAVA6B-2.jpg"
+        class="img-responsive wp-post-image" alt="cheerful-loving-couple-bakers-drinking-coffee-PCAVA6B" srcset="https://awcdn1.ahmad.works/writing/wp-content/uploads/2015/05/cheerful-loving-couple-bakers-drinking-coffee-PCAVA6B-2-300x136.jpg 300w, https://awcdn1.ahmad.works/writing/wp-content/uploads/2015/05/cheerful-loving-couple-bakers-drinking-coffee-PCAVA6B-2-768x349.jpg 768w, https://awcdn1.ahmad.works/writing/wp-content/uploads/2015/05/cheerful-loving-couple-bakers-drinking-coffee-PCAVA6B-2.jpg 880w, https://awcdn1.ahmad.works/writing/wp-content/uploads/2015/05/cheerful-loving-couple-bakers-drinking-coffee-PCAVA6B-2-455x207.jpg 455w, https://awcdn1.ahmad.works/writing/wp-content/uploads/2015/05/cheerful-loving-couple-bakers-drinking-coffee-PCAVA6B-2-267x121.jpg 267w"
+        sizes="(max-width: 880px) 100vw, 880px"> </div>
+    <div class="blog_post_title">
+      <h1 class="entry-title title post_title">{{ article.title }}</h1>
+    </div>
+
+    <div class="blog_post_meta clearfix">
+      <span class="blog_meta_item blog_meta_format entry_format">
+        <a href="#">
+          <i class="fa fa-camera-retro"></i>
+        </a>
+      </span>
+      <span class="blog_meta_item blog_meta_tags">Tags
+        <a href="#" rel="tag">{{ article.category }}</a>
+      </span>
+      <span class="blog_meta_item blog_meta_date">
+        <span class="screen-reader-text"></span>
+        <time class="entry-date published updated" datetime="2015-05-17T23:42:46+00:00">{{ article.date | date: 'dd/MM/yyyy' }}</time>
+      </span>
+      <span class="blog_meta_item blog_meta_author">
+        <span class="author vcard">
+          <a class="meta_author_avatar_url" href="#">
+            <img src="https://awcdn1.ahmad.works/writing/wp-content/uploads/2015/05/Author-150x150.jpg" width="25" height="25"
+              alt="John Doe" class="avatar avatar-25 wp-user-avatar wp-user-avatar-25 alignnone photo">
+          </a>
+          <a class="url fn n" href="#">Duy Nguyen</a>
+        </span>
+      </span>
+    </div>
+
+
+    <div [innerHTML]="article.content" class="entry-content blog_post_text blog_post_description">
+    </div>
+
+    <div class="blog_post_control clearfix">
+      <div class="blog_post_control_item blog_post_share">
+        <span routerLink="" class="share_item share_sign">
+          <i class="fa fa-share "></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

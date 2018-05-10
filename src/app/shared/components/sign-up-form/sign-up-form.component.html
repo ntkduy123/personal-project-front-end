@@ -1,0 +1,46 @@
+<form #f="ngForm" (ngSubmit)="save(f)" novalidate>
+    <div class="form-group {{firstName.invalid && f.submitted ? 'has-error' : '' }}">
+      <label for="firstName">First name</label>
+      <input #firstName="ngModel" [(ngModel)]="user.firstName" type="text" required="required" id="firstName" name="firstName" class="form-control" />
+      <div *ngIf="firstName.invalid && f.submitted" class="help-block">
+        First name is required
+      </div>
+    </div>
+    <div class="form-group {{lastName.invalid && f.submitted ? 'has-error' : '' }}">
+      <label for="lastName">Last name</label>
+      <input #lastName="ngModel" [(ngModel)]="user.lastName" type="text" required="required" id="lastName" name="lastName" class="form-control" />
+      <div *ngIf="lastName.invalid && f.submitted" class="help-block">
+        Last name is required
+      </div>
+    </div>
+    <div class="form-group {{email.invalid && f.submitted ? 'has-error' : '' }}">
+      <label for="email">Email</label>
+      <input #email="ngModel" [(ngModel)]="user.email" type="email" required="required" id="email" name="email" class="form-control" email/>
+      <div *ngIf="email.invalid && f.submitted" class="help-block">
+        <div *ngIf="email.errors.required">
+            Email is required
+        </div>
+        <div *ngIf="!email.errors.required && email.errors.email">
+            Invalid email
+        </div>
+        <div *ngIf="email.errors.emailExist">
+            Email exists
+        </div>
+      </div>
+    </div>
+    <div class="form-group {{password.invalid && f.submitted ? 'has-error' : '' }}">
+      <label for="password">Password</label>
+      <input type="password" #password="ngModel" [(ngModel)]="user.password" required="required" id="password" name="password" class="form-control" />
+      <div *ngIf="password.invalid && f.submitted" class="help-block">
+          Passowrd is not matched
+      </div>
+    </div>
+    <div class="form-group {{password.invalid && f.submitted ? 'has-error' : '' }}">
+      <label for="matchingPassword">Confirm password</label>
+      <input type="password" #matchingPassword="ngModel" [(ngModel)]="user.matchingPassword" required="required" id="matchingPassword" name="matchingPassword" class="form-control" />
+      <div *ngIf="password.invalid && f.submitted" class="help-block">
+        Passowrd is not matched
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

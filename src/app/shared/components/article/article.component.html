@@ -1,0 +1,13 @@
+<ng-container *ngFor="let a of articles">
+    <app-article-card [article]="a"></app-article-card>
+</ng-container>
+<nav class="navigation pagination" role="navigation">
+    <h2 class="screen-reader-text">Posts navigation</h2>
+    <div class="nav-links">
+        <span class='page-numbers current'>1</span>
+        <a class='page-numbers' href='https://ahmad.works/writing/page/2/'>2</a>
+        <a class="next page-numbers" href="https://ahmad.works/writing/page/2/">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+</nav>
