@@ -22,14 +22,11 @@ export class SignUpFormComponent implements OnInit {
 
   save(user) {
     const controls = user.form.controls;
-
-    console.log(user.invalid);
     if (!user.invalid) {
       this.userService.create(user.value)
         .subscribe(
           (response) => {
             if (response) {
-              console.log(response);
               const messages = response.json();
               if (messages.emailExist) {
                 controls.email.setErrors({
