@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:8080/'
+  baseUrl: 'https://gentle-refuge-34117.herokuapp.com/'
 };

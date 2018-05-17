@@ -38,16 +38,19 @@ export class ArticleFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  save(article) {
+  save(form) {
+    const article = form.value;
     article.content = this.content;
 
-    if (this.id) {
-      article.id = this.id;
-      this.articleService.update(article, this.file);
-    } else {
-      this.articleService.create(article, this.file);
+    if (!form.invalid) {
+      if (this.id) {
+        article.id = this.id;
+        this.articleService.update(article, this.file);
+      } else {
+        this.articleService.create(article, this.file);
+      }
+      this.router.navigate(['']);
     }
-    this.router.navigate(['']);
   }
 
   delete() {
