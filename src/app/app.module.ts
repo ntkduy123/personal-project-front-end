@@ -1,23 +1,15 @@
-import { SignUpFormComponent } from './shared/components/sign-up-form/sign-up-form.component';
-import { ArticleDetailComponent } from './shared/components/article-detail/article-detail.component';
-import { AdminModule } from './admin/admin.module';
-import { ArticleComponent } from './shared/components/article/article.component';
-import { ArticleFormComponent } from './shared/components/article-form/article-form.component';
-import { SharedModule } from './shared/shared.module';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { AdminModule } from './admin/admin.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './core/components/header/header.component';
 import { CoreModule } from './core/core.module';
-import { ArticleCardComponent } from './shared/components/article-card/article-card.component';
-import { AdminArticleComponent } from './admin/components/admin-article/admin-article.component';
-import { PublicComponent } from './layouts/public/public.component';
 import { PUBLIC_ROUTES } from './layouts/public.routes';
-import { SecureComponent } from './layouts/secure/secure.component';
+import { PublicComponent } from './layouts/public/public.component';
 import { SECURE_ROUTES } from './layouts/secure.routes';
+import { SecureComponent } from './layouts/secure/secure.component';
+import { SharedModule } from './shared/shared.module';
 
 const APP_ROUTES: Routes = [
   { path: '', component: PublicComponent, data: { title: 'Public Views' }, children: PUBLIC_ROUTES },

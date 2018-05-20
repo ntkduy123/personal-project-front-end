@@ -1,3 +1,4 @@
+import { AuthGuardService } from './services/auth-guard.service';
 import { Article } from './models/article';
 import { ArticleService } from './services/article.service';
 import { CoreModule } from './../core/core.module';
@@ -26,7 +27,7 @@ import { UserService } from './services/user.service';
     ArticleFormComponent,
     TinymceDirective,
     ArticleDetailComponent,
-    SignUpFormComponent
+    SignUpFormComponent,
   ],
   exports: [
     FormsModule,
@@ -37,6 +38,7 @@ import { UserService } from './services/user.service';
     SignUpFormComponent
   ],
   providers: [
+    AuthGuardService,
     ArticleService,
     UserService
   ]

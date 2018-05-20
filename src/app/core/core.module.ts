@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   imports: [
@@ -9,10 +10,11 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([])
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SearchBarComponent,
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
   ]
 })
 export class CoreModule { }
