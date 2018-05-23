@@ -1,13 +1,16 @@
 <!-- start search box -->
-<div class="header_search pull-right autocomplete">
+<div class="header_search pull-right autocomplete expanded_search">
   <form class="search clearfix animated searchHelperFade" method="get" id="searchform">
     <input #query (keyup)="getTitles(query.value)" class="col-md-12 search_text" id="appendedInputButton" placeholder="Hit enter to search" type="text" name="s">
     <div id="myInputautocomplete-list" class="autocomplete-items">
-      <div><strong>T</strong>aiwan<input value="Taiwan" type="hidden"></div>
+      <ng-container *ngFor="let a of autocompleteList">
+          <div><strong>{{ a.substring(0, query.value.length) }}</strong>{{ a }}<input value="Taiwan" type="hidden"></div>
+      </ng-container>
+      <!-- <div><strong>T</strong>aiwan<input value="Taiwan" type="hidden"></div>
       <div><strong>T</strong>ajikistan<input value="Tajikistan" type="hidden"></div>
       <div><strong>T</strong>anzania<input value="Tanzania" type="hidden"></div>
       <div><strong>T</strong>hailand<input value="Thailand" type="hidden"></div>
-      <div><strong>T</strong>imor L'Este<input value="Timor" type="hidden"></div>
+      <div><strong>T</strong>imor L'Este<input value="Timor" type="hidden"></div> -->
     </div>
     <input type="hidden" name="post_type" value="post" />
     <i class="fa fa-search">

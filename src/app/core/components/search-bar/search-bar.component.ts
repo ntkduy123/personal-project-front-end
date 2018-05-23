@@ -10,7 +10,9 @@ import { environment } from '../../../../environments/environment';
 export class SearchBarComponent implements OnInit {
 
   private baseUrl = environment.baseUrl;
-  
+
+  public autocompleteList: any[] = [];
+
   constructor(private http: Http) { }
 
   ngOnInit() {
@@ -18,7 +20,8 @@ export class SearchBarComponent implements OnInit {
 
   getTitles(query) {
     this.http.get(this.baseUrl + 'api/article/test/' + query).subscribe(response => {
-      console.log(response);
+      this.autocompleteList = response.json();
+      console.log(this.autocompleteList);
     });
   }
 }

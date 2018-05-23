@@ -404,9 +404,10 @@ start header css style
 	border-left: 1px solid #eee;
 	padding: 16px 0;
 	margin-left: 20px;
+	width: 280px;
+	border-right: 1px solid #eee;
 }
 .header_search > form.search {
-	position: relative;
 	height: 100%;
 	margin-left: 0px;
 }
@@ -442,6 +443,7 @@ start header css style
 	cursor: pointer;
 	top: 50%;
 	margin-top: -8px;
+	right: 10px;
 }
 
 .header_search > form.search > i > .search_submit {
@@ -3396,11 +3398,9 @@ start mobile menu
 	.top_header_items_holder.mobile_menu_opened .header_search {
 		border-left: 0;
 		border: 1px solid #f2f2f2;
-		border-radius: 30px;
+		/* border-radius: 30px; */
 		padding-top: 7px;
 		padding-bottom: 7px;
-		padding-right: 12px;
-		padding-left: 10px;
 		float: unset !important;
 		margin-left: 0;
 		margin-top: 12px;
@@ -4540,4 +4540,8 @@ max-width:280px;
 
 main_content col-md-9 img.wp-image-159.size-full.alignright {
 max-width:250px;
+}
+
+.display-none {
+	display: none;
 }
