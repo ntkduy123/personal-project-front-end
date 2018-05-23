@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-search-bar',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor() { }
+  private baseUrl = environment.baseUrl;
+  
+  constructor(private http: Http) { }
 
   ngOnInit() {
   }
 
+  getTitles(query) {
+    this.http.get(this.baseUrl + 'api/article/test/' + query).subscribe(response => {
+      console.log(response);
+    });
+  }
 }

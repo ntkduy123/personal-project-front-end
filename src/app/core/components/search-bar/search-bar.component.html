@@ -1,11 +1,18 @@
 <!-- start search box -->
-<div class="header_search pull-right">
-    <form class="search clearfix animated searchHelperFade" method="get" id="searchform">
-      <input class="col-md-12 search_text" id="appendedInputButton" placeholder="Hit enter to search" type="text" name="s">
-      <input type="hidden" name="post_type" value="post" />
-      <i class="fa fa-search">
-        <input type="button" class="search_submit" id="searchsubmit" value="" />
-      </i>
-    </form>
-  </div>
+<div class="header_search pull-right autocomplete">
+  <form class="search clearfix animated searchHelperFade" method="get" id="searchform">
+    <input #query (keyup)="getTitles(query.value)" class="col-md-12 search_text" id="appendedInputButton" placeholder="Hit enter to search" type="text" name="s">
+    <div id="myInputautocomplete-list" class="autocomplete-items">
+      <div><strong>T</strong>aiwan<input value="Taiwan" type="hidden"></div>
+      <div><strong>T</strong>ajikistan<input value="Tajikistan" type="hidden"></div>
+      <div><strong>T</strong>anzania<input value="Tanzania" type="hidden"></div>
+      <div><strong>T</strong>hailand<input value="Thailand" type="hidden"></div>
+      <div><strong>T</strong>imor L'Este<input value="Timor" type="hidden"></div>
+    </div>
+    <input type="hidden" name="post_type" value="post" />
+    <i class="fa fa-search">
+      <input type="button" class="search_submit" id="searchsubmit" value="" />
+    </i>
+  </form>
+</div>
   <!-- end search box -->
