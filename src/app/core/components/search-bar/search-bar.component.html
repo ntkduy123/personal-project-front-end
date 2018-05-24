@@ -1,10 +1,10 @@
 <!-- start search box -->
 <div class="header_search pull-right autocomplete expanded_search">
   <form class="search clearfix animated searchHelperFade" method="get" id="searchform">
-    <input #query (keyup)="getTitles(query.value)" class="col-md-12 search_text" id="appendedInputButton" placeholder="Hit enter to search" type="text" name="s">
+    <input #query (focus)="isOnFocus = true" (blur)="isOnFocus = false" (keyup)="getTitles(query.value)" class="col-md-12 search_text" id="appendedInputButton" placeholder="Hit enter to search" type="text" name="s">
     <div id="myInputautocomplete-list" class="autocomplete-items">
       <ng-container *ngFor="let a of autocompleteList">
-          <div><strong>{{ a.substring(0, query.value.length) }}</strong>{{ a }}<input value="Taiwan" type="hidden"></div>
+          <div *ngIf="isOnFocus"><strong>{{ a.substring(0, query.value.length) }}</strong>{{ a.substring(query.value.length) }}<input value="Taiwan" type="hidden"></div>
       </ng-container>
       <!-- <div><strong>T</strong>aiwan<input value="Taiwan" type="hidden"></div>
       <div><strong>T</strong>ajikistan<input value="Tajikistan" type="hidden"></div>

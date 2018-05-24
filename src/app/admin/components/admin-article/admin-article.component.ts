@@ -13,8 +13,8 @@ export class AdminArticleComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
 
-  constructor(private aritcleService: ArticleService) {
-    this.subscription = this.aritcleService.getAll().subscribe(response => {
+  constructor(private articleService: ArticleService) {
+    this.subscription = this.articleService.getAll().subscribe(response => {
       this.articles = response.json();
     });
   }
@@ -24,6 +24,14 @@ export class AdminArticleComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  delete(id) {
+    if (confirm('Are you sure you want to delete this product ?')) {
+      this.articleService.delete(id);
+    }
+
+    return;
   }
 
 }

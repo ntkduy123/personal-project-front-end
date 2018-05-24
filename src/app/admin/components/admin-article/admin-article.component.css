@@ -7,6 +7,15 @@
     color: green;
 }
 
+.table .fa-pencil {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.table .fa-trash:hover {
+    color: red;
+}
+
 .table .fa-ban {
     margin-right: 5px;
     cursor: pointer;

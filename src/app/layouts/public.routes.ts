@@ -7,7 +7,7 @@ import { SignUpFormComponent } from '../shared/components/sign-up-form/sign-up-f
 import { ArticleComponent } from '../shared/components/article/article.component';
 
 export const PUBLIC_ROUTES: Routes = [
-    { path: 'admin/articles', component: AdminArticleComponent, canActivate: [AuthGuardService] },
+    { path: 'admin/articles', component: AdminArticleComponent },
     { path: 'admin/article/new', component: ArticleFormComponent },
     { path: 'admin/article/:id', component: ArticleFormComponent },
     { path: 'article/:id', component: ArticleDetailComponent },

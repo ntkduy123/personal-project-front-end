@@ -13,6 +13,9 @@ export class SearchBarComponent implements OnInit {
 
   public autocompleteList: any[] = [];
 
+
+  public isOnFocus: boolean = false;
+
   constructor(private http: Http) { }
 
   ngOnInit() {
@@ -24,4 +27,5 @@ export class SearchBarComponent implements OnInit {
       console.log(this.autocompleteList);
     });
   }
+
 }
