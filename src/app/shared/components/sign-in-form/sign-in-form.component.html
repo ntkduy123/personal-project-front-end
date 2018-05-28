@@ -1,0 +1,13 @@
+<form class="form" #f="ngForm" (ngSubmit)="signIn(f)" novalidate>
+  <div>
+    <h2 style="text-align: center;">Welcome to my blog</h2>
+  </div>
+  <div class="form-group">
+    <input placeholder="Email" #email="ngModel" [(ngModel)]="user.email" type="email" required="required" id="email" name="email" class="form-control" email/>
+  </div>
+  <div class="form-group">
+    <input placeholder="Password" type="password" #password="ngModel" [(ngModel)]="user.password" required="required" id="password" name="password" class="form-control" />
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button routerLink="/" type="button" class="btn btn-default">Back to home page</button>
+</form>

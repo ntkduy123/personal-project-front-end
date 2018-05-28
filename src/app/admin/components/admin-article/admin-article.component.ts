@@ -26,9 +26,16 @@ export class AdminArticleComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  delete(id) {
+  delete(article) {
     if (confirm('Are you sure you want to delete this product ?')) {
-      this.articleService.delete(id);
+      this.articleService.delete(article.id).subscribe(response => {
+        if (response.status == 200) {
+          const index = this.articles.indexOf(article, 0);
+          if (index > -1) {
+            this.articles.splice(index, 1);
+          }
+        }
+      });
     }
 
     return;

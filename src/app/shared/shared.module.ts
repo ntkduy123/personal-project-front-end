@@ -13,6 +13,7 @@ import { ArticleDetailComponent } from './components/article-detail/article-deta
 import { RouterModule } from '@angular/router';
 import { SignUpFormComponent } from './components/sign-up-form/sign-up-form.component';
 import { UserService } from './services/user.service';
+import { SignInFormComponent } from './components/sign-in-form/sign-in-form.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { UserService } from './services/user.service';
     TinymceDirective,
     ArticleDetailComponent,
     SignUpFormComponent,
+    SignInFormComponent,
   ],
   exports: [
     FormsModule,

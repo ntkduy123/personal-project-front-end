@@ -11,4 +11,8 @@ export class UserService {
   create(user) {
     return this.http.post(this.baseUrl + '/registration', JSON.stringify(user));
   }
+
+  verify(user) {
+    return this.http.post(this.baseUrl + '/login', JSON.stringify(user));
+  }
 }

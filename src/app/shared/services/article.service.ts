@@ -64,11 +64,6 @@ export class ArticleService {
   }
 
   delete(id) {
-    console.log(id);
-    this.http
-      .delete(this.baseUrl + 'api/article/delete/' + id)
-      .subscribe(response => {
-        return response;
-      });
+    return this.http.delete(this.baseUrl + 'api/article/delete/' + id);
   }
 }
