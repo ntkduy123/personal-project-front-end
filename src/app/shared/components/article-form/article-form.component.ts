@@ -53,15 +53,6 @@ export class ArticleFormComponent implements OnInit {
     }
   }
 
-  delete() {
-    if (confirm('Are you sure you want to delete this product ?')) {
-      this.articleService.delete(this.id);
-      this.router.navigate(['admin/articles']);
-    }
-
-    return;
-  }
-
   uploadImage(event) {
     const fileList: FileList = event.target.files;
     if (fileList.length > 0) {
